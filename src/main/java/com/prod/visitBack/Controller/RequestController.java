@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins = {"http://localhost:4200/", "http://192.168.1.71:4200"})
+@CrossOrigin(origins = {"http://electrictlt.ru", "http://localhost:4200"})
 @RestController
 public class RequestController {
     private final RequestService requestService;
