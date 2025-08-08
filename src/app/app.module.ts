@@ -7,6 +7,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
 import { ServiceListComponent } from './pages/service-list/service-list.component';
 import { HomeComponent } from './pages/home/home.component';
+import { HttpClient } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,11 @@ import { HomeComponent } from './pages/home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
