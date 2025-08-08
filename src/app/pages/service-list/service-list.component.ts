@@ -22,7 +22,7 @@ export class ServiceListComponent implements OnInit{
   private services: Service[][] = [];
   private fg: FormGroup = new FormGroup('');
   async getServiceData(){
-     const response = await axios.get<Service[][]>("http://localhost:8000/services");
+     const response = await axios.get<Service[][]>("/api/services");
      this.services = response.data;
      console.log(this.services)
   }
@@ -36,7 +36,7 @@ export class ServiceListComponent implements OnInit{
     }
     const response = axios({
       method: 'post',
-      url: 'http://localhost:8000/request',
+      url: '/api/request',
       data: post
     });
     if((await response).status === 201)
