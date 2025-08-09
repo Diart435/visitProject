@@ -34,10 +34,11 @@ export class ServiceListComponent implements OnInit{
       userName: this.reqForm.controls['userName'].value,
       phoneNumber: this.reqForm.controls['phoneNumber'].value
     }
-    const response = axios({
-      method: 'post',
-      url: '/api/request',
-      data: post
+    const response = axios.post('/api/request', post, {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      withCredentials: true
     });
     if((await response).status === 201)
     {
