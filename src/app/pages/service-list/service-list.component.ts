@@ -22,7 +22,7 @@ export class ServiceListComponent implements OnInit{
   private services: Service[][] = [];
   private fg: FormGroup = new FormGroup('');
   async getServiceData(){
-     const response = await axios.get<Service[][]>("/api/services");
+     const response = await axios.get<Service[][]>("api/services");
      this.services = response.data;
      console.log(this.services)
   }
@@ -34,7 +34,7 @@ export class ServiceListComponent implements OnInit{
       userName: this.reqForm.controls['userName'].value,
       phoneNumber: this.reqForm.controls['phoneNumber'].value
     }
-    const response = axios.post('/api/request', post, {
+    const response = axios.post('api/request', post, {
       headers: {
         'Content-Type': 'application/json'
       },

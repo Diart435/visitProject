@@ -3,6 +3,7 @@
     <thead>
         <tr>
         <th scope="col">Ремонт</th>
+        <th scope="col">Стоимость</th>
         </tr>
     </thead>
     <tbody>
@@ -10,33 +11,32 @@
             <td>
             {{i.title}}
             </td>
+            <td>
+            {{i.cost}}
+            </td>
         </tr>
-    </tbody>
-</table>
-<table class="table">
-    <thead>
         <tr>
         <th scope="col">Замена</th>
+        <th scope="col">Стоимость</th>
         </tr>
-    </thead>
-    <tbody>
         <tr *ngFor="let i of getServices()[1]">
             <td>
             {{i.title}}
             </td>
+            <td>
+            {{i.cost}}
+            </td>
         </tr>
-    </tbody>
-</table>
-<table class="table">
-    <thead>
         <tr>
         <th scope="col">Разное</th>
+        <th scope="col">Стоимость</th>
         </tr>
-    </thead>
-    <tbody>
         <tr *ngFor="let i of getServices()[2]">
             <td>
             {{i.title}}
+            </td>
+            <td>
+            {{i.cost}}
             </td>
         </tr>
     </tbody>
