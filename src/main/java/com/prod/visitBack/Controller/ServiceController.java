@@ -11,7 +11,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = {"http://localhost:4200/", "http://electrictlt.ru"})
+@CrossOrigin(origins = {
+        "https://electrictlt.ru",
+        "https://www.electrictlt.ru",
+        "https://90.156.158.187"
+})
 @RestController
 public class ServiceController {
     private final ServiceListService serviceListService;

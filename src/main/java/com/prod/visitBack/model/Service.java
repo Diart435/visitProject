@@ -15,14 +15,18 @@ public class Service {
     @Column(name="type")
     private int type;
 
+    @Column(name="cost")
+    private String cost;
+
     public Service()
     {
 
     }
-    public Service(String title, int type)
+    public Service(String title, int type, String cost)
     {
         this.title = title;
         this.type = type;
+        this.cost = cost;
     }
 
     public Long getId() {
@@ -47,5 +51,13 @@ public class Service {
 
     public void setType(int type) {
         this.type = type;
+    }
+
+    public String getCost() {
+        return cost;
+    }
+
+    public void setCost(String cost) {
+        this.cost = cost;
     }
 }
