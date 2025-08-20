@@ -2,7 +2,7 @@
 
 ## Settings
 
-put your data of Telegram bot Token(BOT_TOKEN), username(DB_USER), password(DB_PASSWORD), url(DB_URL) of postgresql into the enviroment variables of JVM
+put your data of Telegram bot Token(BOT_TOKEN); username(DB_USER), password(DB_PASSWORD), url(DB_URL) of postgresql into the enviroment variables of JVM
 
 ## Building
 
